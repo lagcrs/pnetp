@@ -1,0 +1,26 @@
+body{
+    background-image: url("../img/ministerios/nos.png");
+    background-repeat: repeat-y;
+    background-position: right;
+    background-color: #30859A;
+
+}
+.card{
+    margin-top: 100px;
+    align-items: center;
+}
+.card h3{
+    padding-top: 20px;
+}
+.form-group .form-control{
+    margin-bottom: 30px;
+    border-radius: 2px;
+}
+.btn{
+    position: relative;
+    left: 70px;
+    margin-top: 40px;
+}
+.form-check{
+    margin-top: 38px;
+}
