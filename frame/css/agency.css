@@ -682,3 +682,10 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .portfolio-modal .card{
   border: none;
 }
+#carouselExampleSlidesOnly .d-block{
+  width: 260px;
+  height: 80px;;
+}
+#implementadores{
+
+}

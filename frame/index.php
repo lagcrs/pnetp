@@ -41,16 +41,17 @@
               <a class="nav-link js-scroll-trigger" href="#services">Sobre</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#implementadores">Implementadores</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Eixos do Plano Nacional</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">Status do Monitoramento</a>
             </li>
+          
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Baixar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="login.php">Login</a>
+              <a class="nav-link js-scroll-trigger" href="login.php" target="_blank">Login</a>
             </li>
           </ul>
         </div>
@@ -102,6 +103,50 @@
         </div>
     </section>
 
+ <!-- Clients -->
+    <section class="py-5" id="implementadores">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Orgãos Implementadores</h2>
+          </div>
+        </div>
+        <div class="row">
+        <div class="col-lg-6 offset-lg-4">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block" src="img/ministerios/dpu.png" alt="Defensoria Pública da União">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block" src="img/ministerios/enap.png" alt="Escola Nacional de Administração Pública">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block" src="img/ministerios/ministerio_direitos_humanos.png" alt="Ministério dos Direitos Humanos">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block" src="img/ministerios/ministerio_desenvolvimento_social.png" alt="Ministério do Desenvolvimento Social">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block" src="img/ministerios/ministerio_educacao.png" alt="Ministério da Educação">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block" src="img/ministerios/ministerio_relacoes_exteriores.png" alt="Ministério das Relações Exteriores">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block" src="img/ministerios/ministerio_seguranca_publica.png" alt="Ministério da Segurança Pública">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block" src="img/ministerios/ministerio_trabalho.png" alt="Ministério do Trabalho">
+            </div>
+          </div>
+        </div>
+       </div>
+      </div>
+
+    </section>
+
+    
     <!-- Portfolio Grid -->
     <section class="bg-light" id="portfolio">
       <div class="container">
@@ -157,7 +202,7 @@
       </div>
     </section>
 
-    <!-- About -->
+    <!-- Avaliação de Indicadores -->
     <section id="about">
       <div class="container">
         <div class="row">
@@ -173,49 +218,6 @@
       </div>
     </section>
 
-    <!-- Clients -->
-    <section class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-2 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/ministerios/ministeriodireito.jpeg" alt="">
-            </a>
-          </div>
-          <div class="col-md-2 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/ministerios/md.jpeg" alt="">
-            </a>
-          </div>
-          <div class="col-md-2 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/ministerios/ministerioeducacao.jpeg" alt="">
-            </a>
-          </div>
-          <div class="col-md-2 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/ministerios/ministeriojustica.jpeg" alt="">
-            </a>
-          </div>
-          <div class="col-md-2 col-sm-6">
-              <a href="#">
-                <img class="img-fluid d-block mx-auto" src="img/ministerios/ministeriorelacoes.jpeg" alt="">
-              </a>
-            </div>
-            <div class="col-md-2 col-sm-6">
-                <a href="#">
-                  <img class="img-fluid d-block mx-auto" src="img/ministerios/ministeriosaude.jpeg" alt="">
-                </a>
-              </div>
-              <div class="col-md-2 col-sm-6">
-                  <a href="#">
-                    <img class="img-fluid d-block mx-auto" src="img/ministerios/ministeriotrabalho.jpeg" alt="">
-                  </a>
-                </div>
-        </div>
-      </div>
-
-    </section>
     
     <!-- Footer -->
   <?php include("footer.php")?>
@@ -266,7 +268,6 @@
         chart.draw(data, options);
       }
     </script>
-  </head>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
