@@ -1,11 +1,42 @@
 const path = require('path');
 const babiliPlugin = require('babili-webpack-plugin');
+const extractTextPlugin = require('extract-text-webpack-plugin');
+const optimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require('webpack');
 
 let plugins = [];
 
+plugins.push(
+  new extractTextPlugin("style.css")
+);
+
+plugins.push(
+  new webpack.ProvidePlugin({
+    $: 'jquery/dist/jquery.js',
+    jQuery: 'jquery/dist/jquery.js'
+  })
+);
+
+plugins.push(
+  new webpack.optimize.CommonsChunkPlugin({
+    name: 'vendor',
+    filename: 'vendor.bundle.js'
+  })
+);
+
 if (process.env.NODE_ENV === 'production') {
+  plugins.push(new webpack.optimize.ModuleConcatenationPlugin());
   plugins.push(new babiliPlugin());
+
+  plugins.push(new optimizeCSSAssetsPlugin({
+    cssProcessor: require('cssnano'),
+    cssProcessorOptions: {
+      discardComments: {
+        removeAll: true
+      }
+    },
+    canPrint: true
+  }));
   
   module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
@@ -28,7 +59,11 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    app: './src/main.js',
+    vendor: ['jquery', 'bootstrap']
+  },
+  
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -45,7 +80,10 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        use: extractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader'
+        })
       },
       { 
         test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, 

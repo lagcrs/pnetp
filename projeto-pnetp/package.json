@@ -12,6 +12,7 @@
     "start": "webpack-dev-server"
   },
   "dependencies": {
+    "jquery": "^3.2.1",
     "vue": "^2.5.11"
   },
   "browserslist": [
@@ -27,7 +28,10 @@
     "babili-webpack-plugin": "^0.1.1",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
+    "cssnano": "^3.10.0",
+    "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
+    "optimize-css-assets-webpack-plugin": "^2.0.0",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
     "vue-loader": "^13.0.5",
